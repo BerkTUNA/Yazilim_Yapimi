@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(satin_al_frm));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -38,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbl_para = new System.Windows.Forms.Label();
+            this.cikisanasayfa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +48,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(548, 27);
+            this.label1.Location = new System.Drawing.Point(521, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 22);
             this.label1.TabIndex = 20;
@@ -57,9 +59,9 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGray;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(41, 74);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 67);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(715, 226);
+            this.dataGridView1.Size = new System.Drawing.Size(699, 236);
             this.dataGridView1.TabIndex = 19;
             // 
             // comboBox1
@@ -74,21 +76,23 @@
             "Kırtasiye",
             "Elektronik",
             "Aksesuar"});
-            this.comboBox1.Location = new System.Drawing.Point(606, 28);
+            this.comboBox1.Location = new System.Drawing.Point(582, 28);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(142, 21);
             this.comboBox1.TabIndex = 18;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // admin_label
             // 
             this.admin_label.AutoSize = true;
             this.admin_label.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.admin_label.Font = new System.Drawing.Font("Georgia", 15F);
-            this.admin_label.Location = new System.Drawing.Point(43, 28);
+            this.admin_label.Location = new System.Drawing.Point(26, 23);
             this.admin_label.Name = "admin_label";
-            this.admin_label.Size = new System.Drawing.Size(81, 24);
+            this.admin_label.Size = new System.Drawing.Size(87, 24);
             this.admin_label.TabIndex = 17;
-            this.admin_label.Text = "Ürünler";
+            this.admin_label.Text = "Ürünler:";
+            this.admin_label.Click += new System.EventHandler(this.admin_label_Click);
             // 
             // satın_al_btn
             // 
@@ -106,7 +110,7 @@
             // 
             this.cikis_btn.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.cikis_btn.Font = new System.Drawing.Font("Book Antiqua", 14.25F);
-            this.cikis_btn.Location = new System.Drawing.Point(639, 339);
+            this.cikis_btn.Location = new System.Drawing.Point(607, 338);
             this.cikis_btn.Name = "cikis_btn";
             this.cikis_btn.Size = new System.Drawing.Size(117, 37);
             this.cikis_btn.TabIndex = 14;
@@ -138,7 +142,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label3.ForeColor = System.Drawing.Color.DarkGreen;
-            this.label3.Location = new System.Drawing.Point(41, 352);
+            this.label3.Location = new System.Drawing.Point(25, 338);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 31);
             this.label3.TabIndex = 24;
@@ -150,17 +154,36 @@
             this.lbl_para.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.lbl_para.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbl_para.ForeColor = System.Drawing.Color.DarkGreen;
-            this.lbl_para.Location = new System.Drawing.Point(71, 356);
+            this.lbl_para.Location = new System.Drawing.Point(54, 341);
             this.lbl_para.Name = "lbl_para";
             this.lbl_para.Size = new System.Drawing.Size(53, 25);
             this.lbl_para.TabIndex = 23;
             this.lbl_para.Text = "Para";
             // 
+            // cikisanasayfa
+            // 
+            this.cikisanasayfa.BackColor = System.Drawing.Color.Transparent;
+            this.cikisanasayfa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cikisanasayfa.FlatAppearance.BorderSize = 0;
+            this.cikisanasayfa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cikisanasayfa.Font = new System.Drawing.Font("Forte", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cikisanasayfa.ForeColor = System.Drawing.Color.Brown;
+            this.cikisanasayfa.Location = new System.Drawing.Point(744, -3);
+            this.cikisanasayfa.Name = "cikisanasayfa";
+            this.cikisanasayfa.Size = new System.Drawing.Size(32, 36);
+            this.cikisanasayfa.TabIndex = 25;
+            this.cikisanasayfa.Text = "X";
+            this.cikisanasayfa.UseVisualStyleBackColor = false;
+            this.cikisanasayfa.Click += new System.EventHandler(this.cikisanasayfa_Click);
+            // 
             // satin_al_frm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(774, 441);
+            this.Controls.Add(this.cikisanasayfa);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbl_para);
             this.Controls.Add(this.label2);
@@ -171,6 +194,8 @@
             this.Controls.Add(this.admin_label);
             this.Controls.Add(this.satın_al_btn);
             this.Controls.Add(this.cikis_btn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "satin_al_frm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ürün Al";
@@ -193,5 +218,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbl_para;
+        private System.Windows.Forms.Button cikisanasayfa;
     }
 }

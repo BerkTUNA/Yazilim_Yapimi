@@ -28,7 +28,7 @@ namespace Proje_Ödevi
                 {
                     if (Controls[i].Text=="Ad" || Controls[i].Text == "Soyad" || Controls[i].Text == "Kullanıcı-Adı" || Controls[i].Text == "Parola" || Controls[i].Text == "TC" || Controls[i].Text == "E-mail" || Controls[i].Text == "Adres" || Controls[i].Text == "Telefon")
                     {
-                        MessageBox.Show("Eksik Bilgi Girdiniz.", "hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Eksik Bilgi Girdiniz.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         kayit_yapildi = false;
                         break;
                         
@@ -62,19 +62,30 @@ namespace Proje_Ödevi
                     break;
                 }
             }
-            
-            if (kayit_yapildi && kullani_adi_yok)
+            if (sifre.Text != sifretekrar.Text)
             {
-                baglanti.Open();
-                OleDbCommand komut = new OleDbCommand("insert into Kullanici(Ad,Soyad,KullaniciAdi,Parola,TC,ePosta,Adres,Telefon) values('" + ad.Text + "','" + soyad.Text + "','" + kullanici_adi.Text + "','" + sifre.Text + "','" + tc.Text + "','" + email.Text + "','" + adres.Text + "','" + telefon.Text + "')", baglanti);
-                komut.ExecuteNonQuery();
-                baglanti.Close();
-                Giris_frm giris = new Giris_frm();
-                giris.Show();
-                this.Hide();
-            }
-            
 
+                MessageBox.Show("Sifreler aynı degil.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                baglanti.Close();
+
+            }
+            else
+            {
+
+
+
+                if (kayit_yapildi && kullani_adi_yok)
+                {
+                    baglanti.Open();
+                    OleDbCommand komut = new OleDbCommand("insert into Kullanici(Ad,Soyad,KullaniciAdi,Parola,ParolaTekrar,TC,ePosta,Adres,Telefon) values('" + ad.Text + "','" + soyad.Text + "','" + kullanici_adi.Text + "','" + sifre.Text + "','" + sifretekrar.Text + "','" + tc.Text + "','" + email.Text + "','" + adres.Text + "','" + telefon.Text + "')", baglanti);
+                    komut.ExecuteNonQuery();
+                    baglanti.Close();
+                    Giris_frm giris = new Giris_frm();
+                    giris.Show();
+                    this.Hide();
+                }
+
+            }
 
             
             
@@ -238,9 +249,37 @@ namespace Proje_Ödevi
         {
             Giris_frm giris = new Giris_frm();
             giris.Show();
+            this.Hide();
         }
 
         private void kayit_frm_Load(object sender, EventArgs e)
+        {
+
+        }
+        char? passwordtekrarkayit = null;
+        private void sifretekrar_Leave(object sender, EventArgs e)
+        {
+            if (sifretekrar.Text == "")
+            {
+                sifretekrar.Text = "Parola-Tekrar";
+                sifretekrar.PasswordChar = Convert.ToChar(passwordtekrarkayit);
+                sifretekrar.ForeColor = Color.Silver;
+            }
+
+        }
+
+        private void sifretekrar_Enter(object sender, EventArgs e)
+        {
+            if (sifretekrar.Text == "Parola-Tekrar")
+            {
+                sifretekrar.Text = "";
+                sifretekrar.PasswordChar = '*';
+                sifretekrar.ForeColor = Color.Black;
+            }
+
+        }
+
+        private void ad_TextChanged(object sender, EventArgs e)
         {
 
         }

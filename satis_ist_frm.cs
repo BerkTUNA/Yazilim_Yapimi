@@ -38,6 +38,8 @@ namespace Proje_Ödevi
             liste.Fill(tablo);
             dataGridView1.DataSource = tablo;
             dataGridView1.ReadOnly = true;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.White;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Red;
             baglanti.Close();
         }
         private void filitre_liste(string Satis_onay)
@@ -157,6 +159,12 @@ namespace Proje_Ödevi
             
 
         }
+
+        private void cikissatisistek_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void ürün_iptal(string KullaniU,string Urunid,int miktar)
         {
             baglanti.Open();

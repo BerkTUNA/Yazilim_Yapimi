@@ -46,10 +46,9 @@ namespace Proje_Ödevi
                {
                    olan_miktar -= istek_miktar;
                    birim = oku["UrunBirim"].ToString();
-                   UrunTuru = oku["UrunTuru"].ToString();
                    baglanti.Close();
                    MiktarGüncelle(Kullanici_adi, olan_miktar, Urun_id);
-                   satisa_ekle(Kullanici_adi, Urun_id, istek_miktar, birim_fiyat,birim,UrunTuru);
+                   satisa_ekle(Kullanici_adi, Urun_id, istek_miktar, birim_fiyat,birim);
                    break;
                }
             }
@@ -62,14 +61,20 @@ namespace Proje_Ödevi
             komut_2.ExecuteNonQuery();
             baglanti.Close();
         }
-        private void satisa_ekle(string kullaniU,string Urunid,int miktar,int fiyat,string birim,string UrunTuru)
+        private void satisa_ekle(string kullaniU,string Urunid,int miktar,int fiyat,string birim)
         {
             baglanti.Open();
-            OleDbCommand komut = new OleDbCommand("insert into Satis(KullaniciAdi,UrunAdi,sUrunMiktar,UrunBirim,UrunFiyat,UrunTuru) values('" + kullaniU + "','" + Urunid + "','" + miktar.ToString() + "','" + birim + "','" + fiyat.ToString() + "','" + UrunTuru + "')", baglanti);
+            OleDbCommand komut = new OleDbCommand("insert into Satis(KullaniciAdi,UrunAdi,sUrunMiktar,UrunBirim,UrunFiyat) values('" + kullaniU + "','" + Urunid + "','" + miktar.ToString() + "','" + birim + "','" + fiyat.ToString() + "')", baglanti);
             komut.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Şatış Onayı Bekleniyor", "Tamam");
             this.Hide();
+        }
+
+        private void cikisparaekle_Click(object sender, EventArgs e)
+        {
+            ana_fr anasayfa = new ana_fr();
+            anasayfa.Show();
         }
     }
 }

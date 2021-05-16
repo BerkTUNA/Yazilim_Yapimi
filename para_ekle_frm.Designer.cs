@@ -57,6 +57,7 @@
             // 
             this.ekle_btn.Font = new System.Drawing.Font("Book Antiqua", 14.25F);
             this.ekle_btn.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.ekle_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ekle_btn.Location = new System.Drawing.Point(71, 221);
             this.ekle_btn.Name = "ekle_btn";
             this.ekle_btn.Size = new System.Drawing.Size(117, 37);
@@ -69,6 +70,8 @@
             // 
             this.cikisparaekle.BackColor = System.Drawing.Color.Transparent;
             this.cikisparaekle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cikisparaekle.FlatAppearance.BorderSize = 0;
+            this.cikisparaekle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisparaekle.Font = new System.Drawing.Font("Forte", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cikisparaekle.ForeColor = System.Drawing.Color.Brown;
             this.cikisparaekle.Location = new System.Drawing.Point(226, -2);
@@ -84,6 +87,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(255, 329);
             this.Controls.Add(this.cikisparaekle);
             this.Controls.Add(this.ekle_btn);

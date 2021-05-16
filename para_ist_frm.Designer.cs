@@ -127,6 +127,8 @@
             // 
             this.cikisanasayfa.BackColor = System.Drawing.Color.Transparent;
             this.cikisanasayfa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cikisanasayfa.FlatAppearance.BorderSize = 0;
+            this.cikisanasayfa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisanasayfa.Font = new System.Drawing.Font("Forte", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cikisanasayfa.ForeColor = System.Drawing.Color.Brown;
             this.cikisanasayfa.Location = new System.Drawing.Point(730, -5);
@@ -142,6 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(758, 402);
             this.Controls.Add(this.cikisanasayfa);
             this.Controls.Add(this.label1);

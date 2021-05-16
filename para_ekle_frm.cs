@@ -21,9 +21,8 @@ namespace Proje_Ödevi
         OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=odev1234.mdb");
         private void ekle_btn_Click(object sender, EventArgs e)
         {
-            if (Controls[0] is TextBox)
-            {
-                if (Controls[0].Text == "")
+            
+                if (istek_para.Text == "")
                 {
                     MessageBox.Show("Lütfen miktar Giriniz.", "hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     
@@ -31,7 +30,7 @@ namespace Proje_Ödevi
 
                 }
 
-            }
+            
             else
             {
                 Para_ekle(istek_para.Text);
@@ -59,7 +58,7 @@ namespace Proje_Ödevi
         {
             ana_fr anasayfa = new ana_fr();
             anasayfa.Show();
-            this.Hide();
+
         }
     }
 }

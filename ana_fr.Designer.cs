@@ -36,7 +36,6 @@
             this.para_ekle_btn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.cikisanasayfa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -46,12 +45,14 @@
             // 
             this.kullanici_lbl.AutoSize = true;
             this.kullanici_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.kullanici_lbl.Font = new System.Drawing.Font("Georgia", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kullanici_lbl.Font = new System.Drawing.Font("Stencil", 16F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.kullanici_lbl.ForeColor = System.Drawing.Color.Cornsilk;
             this.kullanici_lbl.Location = new System.Drawing.Point(64, 18);
             this.kullanici_lbl.Name = "kullanici_lbl";
-            this.kullanici_lbl.Size = new System.Drawing.Size(126, 24);
+            this.kullanici_lbl.Size = new System.Drawing.Size(171, 26);
             this.kullanici_lbl.TabIndex = 0;
             this.kullanici_lbl.Text = "Kullanıcı Adı";
+            this.kullanici_lbl.Click += new System.EventHandler(this.kullanici_lbl_Click);
             // 
             // para_lbl
             // 
@@ -69,6 +70,7 @@
             // satis_btn
             // 
             this.satis_btn.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.satis_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.satis_btn.Font = new System.Drawing.Font("Book Antiqua", 14.25F);
             this.satis_btn.Location = new System.Drawing.Point(25, 338);
             this.satis_btn.Name = "satis_btn";
@@ -81,7 +83,9 @@
             // ürün_al_btn
             // 
             this.ürün_al_btn.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.ürün_al_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ürün_al_btn.Font = new System.Drawing.Font("Book Antiqua", 14.25F);
+            this.ürün_al_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ürün_al_btn.Location = new System.Drawing.Point(214, 338);
             this.ürün_al_btn.Name = "ürün_al_btn";
             this.ürün_al_btn.Size = new System.Drawing.Size(117, 37);
@@ -126,19 +130,6 @@
             this.dataGridView1.TabIndex = 6;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(25, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 39);
-            this.button1.TabIndex = 0;
-            this.button1.TabStop = false;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -155,6 +146,8 @@
             // 
             this.cikisanasayfa.BackColor = System.Drawing.Color.Transparent;
             this.cikisanasayfa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.cikisanasayfa.FlatAppearance.BorderSize = 0;
+            this.cikisanasayfa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cikisanasayfa.Font = new System.Drawing.Font("Forte", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cikisanasayfa.ForeColor = System.Drawing.Color.Brown;
             this.cikisanasayfa.Location = new System.Drawing.Point(744, -3);
@@ -173,7 +166,6 @@
             this.ClientSize = new System.Drawing.Size(774, 441);
             this.Controls.Add(this.cikisanasayfa);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.para_ekle_btn);
@@ -202,7 +194,6 @@
         private System.Windows.Forms.Button para_ekle_btn;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cikisanasayfa;
     }

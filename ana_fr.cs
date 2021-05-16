@@ -11,19 +11,25 @@ using System.Data.OleDb;
 
 namespace Proje_Ödevi
 {
+    
     public partial class ana_fr : Form
     {
         public String Kullanici_adi;
         public string Para;
+        
         public ana_fr()
         {
             InitializeComponent();
         }
         OleDbConnection baglanti = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=odev1234.mdb");
         DataTable tablo = new DataTable();
+       
+           
 
         private void ana_fr_Load(object sender, EventArgs e)
         {
+            
+           
             kullanici_lbl.Text = Kullanici_adi;
             para_lbl.Text = Para;
             baglanti.Open();
@@ -45,6 +51,8 @@ namespace Proje_Ödevi
             OleDbDataAdapter liste = new OleDbDataAdapter("select UrunAdi,UrunMiktar,UrunBirim from kUrun where KullaniciU = '"+Kullanici_adi+"'", baglanti);
             liste.Fill(tablo);
             dataGridView1.DataSource = tablo;
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.White;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Red;
             baglanti.Close();
 
         }
@@ -54,6 +62,8 @@ namespace Proje_Ödevi
             para_ekle_frm para_ekle = new para_ekle_frm();
             para_ekle.kullanici_adi = Kullanici_adi;
             para_ekle.ShowDialog();
+           
+            
         }
 
         private void para_lbl_Click(object sender, EventArgs e)
@@ -89,6 +99,11 @@ namespace Proje_Ödevi
             ürün_al.para = Para;
             ürün_al.Show();
             this.Hide();
+        }
+
+        private void kullanici_lbl_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

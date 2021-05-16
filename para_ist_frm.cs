@@ -49,7 +49,9 @@ namespace Proje_Ödevi
                 liste.Fill(tablo);
                 dataGridView1.DataSource = tablo;
                 dataGridView1.ReadOnly = true;
-                baglanti.Close();
+            dataGridView1.DefaultCellStyle.SelectionBackColor = Color.White;
+            dataGridView1.DefaultCellStyle.SelectionForeColor = Color.Red;
+            baglanti.Close();
 
             
         }
