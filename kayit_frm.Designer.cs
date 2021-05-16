@@ -112,6 +112,7 @@
             this.telefon.Font = new System.Drawing.Font("Book Antiqua", 12F);
             this.telefon.ForeColor = System.Drawing.Color.Silver;
             this.telefon.Location = new System.Drawing.Point(156, 345);
+            this.telefon.MaxLength = 11;
             this.telefon.Name = "telefon";
             this.telefon.Size = new System.Drawing.Size(200, 27);
             this.telefon.TabIndex = 14;

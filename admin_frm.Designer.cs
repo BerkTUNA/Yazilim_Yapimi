@@ -60,7 +60,7 @@
             this.satis_btn.Name = "satis_btn";
             this.satis_btn.Size = new System.Drawing.Size(138, 37);
             this.satis_btn.TabIndex = 1;
-            this.satis_btn.Text = "Şatış İstekleri";
+            this.satis_btn.Text = "Satış İstekleri";
             this.satis_btn.UseVisualStyleBackColor = true;
             this.satis_btn.Click += new System.EventHandler(this.satis_btn_Click);
             // 

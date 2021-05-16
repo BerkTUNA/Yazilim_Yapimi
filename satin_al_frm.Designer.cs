@@ -72,10 +72,11 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Yiyecek",
             "Giysi",
-            "Hammmadde",
+            "Hammadde",
             "Kırtasiye",
             "Elektronik",
-            "Aksesuar"});
+            "Aksesuar",
+            "Mutfak"});
             this.comboBox1.Location = new System.Drawing.Point(582, 28);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(142, 21);

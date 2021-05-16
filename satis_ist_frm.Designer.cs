@@ -121,7 +121,7 @@
             this.admin_label.Name = "admin_label";
             this.admin_label.Size = new System.Drawing.Size(139, 24);
             this.admin_label.TabIndex = 10;
-            this.admin_label.Text = "Şatış İstekleri:";
+            this.admin_label.Text = "Satış İstekleri:";
             // 
             // cikissatisistek
             // 

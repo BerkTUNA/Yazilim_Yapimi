@@ -101,7 +101,7 @@ namespace Proje_Ödevi
             else if (comboBox1.SelectedIndex == 2)
             {
                 tablo.Clear();
-                filitre = "Hammmadde";
+                filitre = "Hammadde";
                 filitre_liste(filitre);
             }
             else if (comboBox1.SelectedIndex == 3)
@@ -116,6 +116,19 @@ namespace Proje_Ödevi
                 filitre = "Elektronik";
                 filitre_liste(filitre);
             }
+            else if (comboBox1.SelectedIndex == 5)
+            {
+                tablo.Clear();
+                filitre = "Aksesuar";
+                filitre_liste(filitre);
+            }
+            else if (comboBox1.SelectedIndex == 6)
+            {
+                tablo.Clear();
+                filitre = "Mutfak";
+                filitre_liste(filitre);
+            }
+
             else
             {
                 tablo.Clear();
